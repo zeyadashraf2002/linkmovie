@@ -1,10 +1,8 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { LangContext } from "./context/LangContext";
 import Details from './Pages/Details';
-
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Favorites from './Pages/Favorites';
@@ -20,15 +18,15 @@ export default function App() {
     <BrowserRouter>
       <LangContext.Provider value={{ contextLang, setContextLang }}>
         <Nav />
-        <Switch>
-          <Route path="/" component={HomePage} exact />
-          <Route path="/movies" component={MoviesPage} exact />
-          <Route path="/login" component={Login} exact />
-          <Route path="/register" component={Register} exact />
-          <Route path="/fav" component={Favorites} exact />
-          <Route path="/movie/:id" component={Details} exact />
-          <Route component={NotFound} /> {/* fallback */}
-        </Switch>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/fav" element={<Favorites />} />
+          <Route path="/movie/:id" element={<Details />} />
+          <Route path="*" element={<NotFound />} /> {/* fallback */}
+        </Routes>
       </LangContext.Provider>
     </BrowserRouter>
   );

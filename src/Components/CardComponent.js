@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToFav } from "../Redux/Actions/AddToFav";
 import removeFromFav from "../Redux/Actions/RemoveFav";

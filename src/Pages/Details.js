@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToFav } from "../Redux/Actions/AddToFav";
 import removeFromFav from "../Redux/Actions/RemoveFav";
