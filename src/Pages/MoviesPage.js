@@ -10,8 +10,7 @@ import Pagination from './../Components/Pagination';
 
 function MoviesPage() {
   const dispatch = useDispatch();
-  const reduxLang = useSelector((state) => state.myLangReducer.lang);
-  const theme = useSelector((state) => state.myThemeReducer.theme); // ✅ Dark/Light
+  const theme = useSelector((state) => state.myThemeReducer.theme); 
   const loader = useSelector((state) => state.myLoaderReducer.loader);
 
   const { contextLang, setContextLang } = useContext(LangContext);
